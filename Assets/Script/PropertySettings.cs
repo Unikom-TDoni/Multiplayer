@@ -70,6 +70,13 @@ namespace Edu.Multiplayer.Setting
             });
         }
 
+        public void UpdateNetworkValue()
+        {
+            var property = new Hashtable();
+            property.Add(_propertyKey, _slider.value);
+            PhotonNetwork.CurrentRoom.SetCustomProperties(property);
+        }
+
         private void SetValue(float value)
         {
             if (!PhotonNetwork.IsMasterClient)

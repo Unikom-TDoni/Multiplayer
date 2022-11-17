@@ -1,8 +1,6 @@
-using Edu.Multiplayer.Battle;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Edu.Multiplayer.Battle;
 
 namespace Edu.Multiplayer.Player
 {

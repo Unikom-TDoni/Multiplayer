@@ -7,6 +7,7 @@ using TMPro;
 using System;
 using Photon.Realtime;
 using Edu.Multiplayer.Core;
+using Edu.Multiplayer.Setting;
 
 namespace Edu.Multiplayer.Network
 {
@@ -48,6 +49,9 @@ namespace Edu.Multiplayer.Network
         [SerializeField]
         private Button _btnLeave = default;
 
+        [SerializeField]
+        private PropertySettings[] _propertySetting = default;
+
         private readonly List<RoomItem> _roomItemList = new();
 
         private readonly List<PlayerItem> _playerItemList = new();
@@ -83,6 +87,15 @@ namespace Edu.Multiplayer.Network
                     PhotonNetwork.CurrentRoom.IsOpen = false;
                     PhotonNetwork.LoadLevel(GameManager.Instance.SceneObjects.Gameplay);
                 }
+            });
+
+            _btnLeave.onClick.AddListener(() =>
+            {
+                _lobby.SetActive(true);
+                _room.SetActive(false);
+                PhotonNetwork.LeaveRoom();
+                if (PhotonNetwork.IsMasterClient)
+                    _roomInfoCache.Clear();
             });
         }
 

@@ -42,7 +42,7 @@ namespace Edu.Multiplayer.Player
                 _maxHealth = (float)health;
 
             Health = _maxHealth;
-            _txtHealth.text = $"{Health}:f1/{_maxHealth}:f1";
+            _txtHealth.text = $"{Health:f2}/{_maxHealth:f2}";
         }
 
         public void SetChoosenCard(Card card)
@@ -54,7 +54,7 @@ namespace Edu.Multiplayer.Player
             }
 
             _choosenCard = card;
-            _choosenCard.transform.DOScale(_choosenCard.transform.localScale * 1.2f, 0.2f);
+            _choosenCard.transform.DOScale(_choosenCard.transform.localScale * 1.1f, 0.2f);
         }
 
         public void ChangeHealth(float ammount)
@@ -63,7 +63,7 @@ namespace Edu.Multiplayer.Player
             Health = Mathf.Clamp(Health, 0, _maxHealth);
 
             _healthBar.UpdateBar(Health / _maxHealth);
-            _txtHealth.text = $"{Health}:f1 / {_maxHealth}:f1";
+            _txtHealth.text = $"{Health:f2} / {_maxHealth:f2}";
         }
 
         public void Reset()

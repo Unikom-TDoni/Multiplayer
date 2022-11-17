@@ -446,7 +446,7 @@ MonoBehaviour:
   _slider: {fileID: 1026492005}
   _inputField: {fileID: 1078424238}
   _propertyKey: Restore
-  _initialValue: 50
+  _initialValue: 5
   _minValue: 0
   _maxValue: 100
   _wholeNumber: 0
@@ -891,7 +891,7 @@ MonoBehaviour:
   _slider: {fileID: 1650286579}
   _inputField: {fileID: 1253828266}
   _propertyKey: Health
-  _initialValue: 50
+  _initialValue: 100
   _minValue: 0
   _maxValue: 100
   _wholeNumber: 0
@@ -3228,7 +3228,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571438504}
   m_HandleRect: {fileID: 1571438503}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3728,6 +3728,11 @@ MonoBehaviour:
   _playerItemPerfab: {fileID: 4653132797261216044, guid: c22249ce20f5fc9478da28cb0947238a, type: 3}
   _txtRoomName: {fileID: 1862533641}
   _btnStartGame: {fileID: 932511300}
+  _btnLeave: {fileID: 20736395}
+  _propertySetting:
+  - {fileID: 383862082}
+  - {fileID: 139861219}
+  - {fileID: 1308013355}
 --- !u!1 &1176175917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,7 +4419,7 @@ MonoBehaviour:
   _slider: {fileID: 78514028}
   _inputField: {fileID: 719520210}
   _propertyKey: Damage
-  _initialValue: 50
+  _initialValue: 10
   _minValue: 0
   _maxValue: 100
   _wholeNumber: 0
